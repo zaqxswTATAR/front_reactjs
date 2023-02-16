@@ -12,7 +12,7 @@ const Layout = () => {
 
             <NavBar.Brand>
               <Link to="/" className="nav-link">
-                React MERN Stack CRUD
+                Mathematical Relation
               </Link>
             </NavBar.Brand>
 
