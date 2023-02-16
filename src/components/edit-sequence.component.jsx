@@ -38,14 +38,20 @@ const EditSequence = () => {
     }, []);
 
     const onSubmit = () => {
-        axios.put('http://localhost:3000/api/update-sequence/' + params.id, inputData).then(res => {
-            console.log(res.data)
-            console.log('Sequence successfully updated!')
-            navigate('/sequence-list');
-          })
-          .catch((err) => {
-            console.log(err)
-          });
+        let a = inputData.num2 - inputData.num1;
+
+        if ((inputData.num3 == inputData.num2 + a * 2) && (inputData.num4 == inputData.num3 + a * 3)) {
+            axios.put('http://localhost:3000/api/update-sequence/' + params.id, inputData).then(res => {
+                console.log(res.data)
+                console.log('Sequence successfully updated!')
+                navigate('/sequence-list');
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+        } else {
+            alert('Please input in the following relation:\n(Number 3) = (Number 2) + a * 2\n(Number 4) = (Number 3) + a * 3\nwhile a = (Number 2)-(Number 1)');
+        }
     }
 
     return (

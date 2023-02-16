@@ -31,7 +31,7 @@ const CreateSequence = () => {
         if ((inputData.num3 == inputData.num2 + a * 2) && (inputData.num4 == inputData.num3 + a * 3)) {
             axios.post('http://localhost:3000/api/create-sequence', inputData).then(res => {
                 console.log(res.data)
-                console.log('Sequence successfully created!');
+                console.log('Sequence successfully created!')
                 navigate('/sequence-list');
             });
         } else {
