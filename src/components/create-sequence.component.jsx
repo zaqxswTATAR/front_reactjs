@@ -33,6 +33,9 @@ const CreateSequence = () => {
                 console.log(res.data)
                 console.log('Sequence successfully created!')
                 navigate('/sequence-list');
+            })
+            .catch((err) => {
+                console.log(err)
             });
         } else {
             alert('Please input in the following relation:\n(Number 3) = (Number 2) + a * 2\n(Number 4) = (Number 3) + a * 3\nwhile a = (Number 2)-(Number 1)');
