@@ -2,7 +2,7 @@
 Mathematical relation web-application
 
 ## Project setup
-[NodeJS Download](https://nodejs.org)
+[NodeJS Download](https://nodejs.org)  
 [MongoDB Download](https://www.mongodb.com/docs/manual/administration/install-community/)  
 ## Project run method
 ### Run front-end ReactJS
